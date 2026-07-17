@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ClothRenting2.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../assets/css/admin-dashboard.css" />
+</head>
+<body>
+
+<form id="form1" runat="server">
+
+<div class="admin-container">
+
+    <!-- SIDEBAR -->
+    <div class="admin-sidebar">
+        <h3>Admin Panel</h3>
+        <ul>
+            <li><a href="AdminDashboard.aspx">Dashboard</a></li>
+            <li><a href="ManageCategories.aspx">Manage Categories</a></li>
+            <li><a href="ManageProducts.aspx">Manage Products</a></li>
+            <li><a href="ManageUsers.aspx">Manage Users</a></li>
+            <li><a href="ManageOrders.aspx">Manage Orders</a></li>
+            <li><a href="ViewMessages.aspx">View Messages</a></li>
+            <li><a href="ViewFeedback.aspx">View Feedbacks</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+</div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+﻿/* RESET */
+body {
+    background: red !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f2f3f5;
+}
+
+/* ========================= */
+/* MAIN LAYOUT */
+/* ========================= */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+.admin-sidebar {
+    width: 240px;
+    background: #1f2a37;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+}
+
+    /* SIDEBAR TITLE */
+    .admin-sidebar h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    /* MENU LIST */
+    .admin-sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        /* MENU ITEM */
+        .admin-sidebar ul li {
+            width: 100%;
+        }
+
+            /* LINKS */
+            .admin-sidebar ul li a {
+                display: block;
+                padding: 14px 25px;
+                color: #ddd;
+                text-decoration: none;
+                font-size: 15px;
+                transition: 0.3s;
+            }
+
+                /* HOVER EFFECT */
+                .admin-sidebar ul li a:hover {
+                    background: #2d3b4f;
+                    color: #fff;
+                }
+
+/* ========================= */
+/* MAIN CONTENT */
+/* ========================= */
+.main-content {
+    margin-left: 240px; /* sidebar width ke barabar */
+    padding: 30px;
+    width: 100%;
+    background: #f4f6f9;
+}
+
+/* PAGE TITLE */
+.page-title,
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* ========================= */
+/* FORM CENTER */
+/* ========================= */
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-box {
+    width: 650px;
+    max-width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+    /* LABEL */
+    .form-box label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* INPUT, SELECT, TEXTAREA */
+    .form-box input[type=text],
+    .form-box select,
+    .form-box textarea,
+    .form-box input[type=file] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+        /* FOCUS EFFECT */
+        .form-box input:focus,
+        .form-box select:focus,
+        .form-box textarea:focus {
+            outline: none;
+            border-color: #2f3b52;
+        }
+
+    /* TEXTAREA FIX FULL WIDTH */
+    .form-box textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+/* ========================= */
+/* SAVE BUTTON */
+/* ========================= */
+.btn {
+    margin-top: 25px;
+    padding: 12px;
+    width: 100%;
+    background: #2f3b52;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: #1f2933;
+    }
+
+/* ========================= */
+/* GRID TABLE */
+/* ========================= */
+.table-box {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+    /* GRIDVIEW TABLE */
+    .table-box table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* HEADER */
+    .table-box th {
+        background: #2f3b52;
+        color: #fff;
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* ROWS */
+    .table-box td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+
+    /* EDIT DELETE BUTTON */
+    .table-box input[type=submit] {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #444;
+        color: white;
+        transition: 0.3s;
+    }
+
+        .table-box input[type=submit]:hover {
+            background: #000;
+        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* DASHBOARD BACKGROUND */
+
+.main-content {
+    min-height: 100vh;
+    background: url("../images/admin-dashboard-bg.jpeg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+    /* Dark overlay so text clearly visible */
+    .main-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.55);
+        z-index: 0;
+    }
+
+    /* Bring dashboard content above overlay */
+    .main-content > * {
+        position: relative;
+        z-index: 1;
+    }
+
+
+/* MAIN LAYOUT */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.admin-sidebar {
+    width: 240px;
+    background: rgba(20, 25, 40, 0.95);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 25px;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.4);
+}
+
+    .admin-sidebar h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        color: #f5c77a;
+    }
+
+    .admin-sidebar ul {
+        list-style: none;
+    }
+
+        .admin-sidebar ul li a {
+            display: block;
+            padding: 14px 25px;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+            .admin-sidebar ul li a:hover {
+                background: rgba(255,255,255,0.08);
+                color: #f5c77a;
+            }
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    width: 100%;
+}
+
+/* DASHBOARD GLASS PANEL */
+.dashboard-panel {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.35);
+    color: #fff;
+}
+
+    /* DASHBOARD TITLE */
+    .dashboard-panel h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #f5c77a;
+    }
+
+    /* WELCOME TEXT */
+    .dashboard-panel p {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #eee;
+    }
+/* DASHBOARD CARDS */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.dash-card {
+    background: linear-gradient(135deg, #1f2a37, #2f3b52);
+    color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+    .dash-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .dash-card .icon {
+        font-size: 40px;
+        background: rgba(255,255,255,0.15);
+        padding: 15px;
+        border-radius: 50%;
+    }
+
+    .dash-card .info h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ddd;
+    }
+
+    .dash-card .info p {
+        margin-top: 5px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* Different accent colors */
+    .dash-card.users {
+        border-left: 5px solid #4fc3f7;
+    }
+
+    .dash-card.products {
+        border-left: 5px solid #81c784;
+    }
+
+    .dash-card.orders {
+        border-left: 5px solid #ffb74d;
+    }
+
+    .dash-card.revenue {
+        border-left: 5px solid #e57373;
+    }
+.page-title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.admin-table-wrap {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .admin-table th {
+        background: #1f2933;
+        color: #fff;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .admin-table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+
+    .admin-table tr:hover {
+        background: #f5f5f5;
+    }
+
+/* DELETE BUTTON */
+.btn-delete {
+    color: #fff;
+    background: #e63946;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+    .btn-delete:hover {
+        background: #c1121f;
+    }

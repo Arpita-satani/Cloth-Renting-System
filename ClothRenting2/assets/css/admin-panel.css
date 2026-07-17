@@ -1,0 +1,89 @@
+﻿body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    background: #222;
+    padding: 20px;
+    color: white;
+}
+
+    .sidebar a {
+        display: block;
+        padding: 12px;
+        color: #ccc;
+        text-decoration: none;
+    }
+
+        .sidebar a:hover {
+            background: #ff6a00;
+            color: white;
+        }
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* FORM VERTICAL */
+.form-box {
+    background: white;
+    padding: 25px;
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #aaa;
+}
+
+    .form-box label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .form-box input,
+    .form-box select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    .form-box .btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+
+.table-box {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
